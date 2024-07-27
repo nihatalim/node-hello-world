@@ -26,7 +26,7 @@ spec:
             limits:
               memory: "521Mi"
               cpu: "500m"
-          image: harbor.nihatalim.com.tr/registry/node-hello-world:1ccdee1
+          image: harbor.nihatalim.com.tr/registry/node-hello-world:latest
           ports:
             - name: http
               containerPort: 9090
