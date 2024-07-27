@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: node-hello-world-ingress
-  namespace: differ
+  namespace: default
   labels:
     app: node-hello-world
   annotations:

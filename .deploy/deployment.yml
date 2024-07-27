@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-hello-world
-  namespace: differ
+  namespace: default
   labels:
     app: node-hello-world
 spec:
