@@ -16,7 +16,7 @@ spec:
         app: node-hello-world
     spec:
       imagePullSecrets:
-        - name: differ-secret
+        - name: git-secret
       containers:
         - name: node-hello-world
           resources:
