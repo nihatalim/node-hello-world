@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-hello-world
+  namespace: differ
+  labels:
+    app: node-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-hello-world
+  template:
+    metadata:
+      labels:
+        app: node-hello-world
+    spec:
+      imagePullSecrets:
+        - name: git-secret
+      containers:
+        - name: node-hello-world
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+            limits:
+              memory: "521Mi"
+              cpu: "500m"
+          image: harbor.nihatalim.com.tr/registry/node-hello-world:1ccdee1
+          ports:
+            - name: http
+              containerPort: 9090
