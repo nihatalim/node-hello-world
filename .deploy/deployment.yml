@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-hello-world
-  namespace: default
+  namespace: differ
   labels:
     app: node-hello-world
 spec:
@@ -16,7 +16,7 @@ spec:
         app: node-hello-world
     spec:
       imagePullSecrets:
-        - name: git-secret
+        - name: differ-secret
       containers:
         - name: node-hello-world
           resources:
